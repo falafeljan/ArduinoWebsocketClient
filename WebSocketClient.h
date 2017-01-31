@@ -22,8 +22,8 @@
  THE SOFTWARE.
  */
 
-#ifndef WEBSOCKETCLIENT_H
-#define WEBSOCKETCLIENT_H_
+#ifndef _WEBSOCKETCLIENT_H_
+#define _WEBSOCKETCLIENT_H_
 
 #include <string.h>
 #include <stdlib.h>
@@ -51,6 +51,5 @@ class WebSocketClient {
         bool readHandshake();
         String readLine();
 };
-
 
 #endif
