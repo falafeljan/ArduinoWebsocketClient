@@ -35,15 +35,16 @@
 #define WIFLY true
 
 class WebSocketClient {
-	public:
-		typedef void (*DataArrivedDelegate)(WebSocketClient client, String data);
-		bool connect(char hostname[], char path[] = "/", int port = 80);
+public:
+	typedef void (*DataArrivedDelegate)(WebSocketClient client, String data);
+	bool connect(char hostname[], char path[] = "/", int port = 80);
         bool connected();
         void disconnect();
-		void monitor();
-		void setDataArrivedDelegate(DataArrivedDelegate dataArrivedDelegate);
-		void send(String data);
-	private:
+	void monitor();
+	void setDataArrivedDelegate(DataArrivedDelegate dataArrivedDelegate);
+	void send(String data);
+
+private:
         String getStringTableItem(int index);
         void sendHandshake(char hostname[], char path[]);
         EthernetClient _client;
